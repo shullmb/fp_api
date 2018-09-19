@@ -46,9 +46,10 @@ app.get('/profile', isLoggedIn, (req,res) => {
 })
 
 app.use('/auth', require('./controllers/auth'));
+app.use('/api/v1/frostpoint', require('./controllers/frostpoint'));
 
 const server = app.listen(process.env.PORT || 3000, () => {
-  console.log("server running on port 3000");
+  console.log("🔥 🔥 🔥 server running on port 3000 🔥 🔥 🔥");
 })
 
 module.exports = server;
