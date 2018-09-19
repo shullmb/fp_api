@@ -30,7 +30,8 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     api_key: {
-      type: DataTypes
+      type: DataTypes.UUID,
+      default: DataTypes.UUIDV4
     }
   }, {
     hooks: {

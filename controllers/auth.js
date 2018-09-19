@@ -1,6 +1,7 @@
 const express = require('express');
 const passport = require('../config/passportConfig');
 const db = require('../models');
+const UUID = require('uuid/v4');
 const router = express.Router();
 
 // GET /auth/signup - sends form for signup
@@ -20,7 +21,8 @@ router.post('/signup', (req,res) => {
     where: { email: req.body.email },
     defaults: {
       name: req.body.name,
-      password: req.body.password
+      password: req.body.password,
+      api_key: UUID()
     }
   }).spread( (user,created) => {
     if (created) {
