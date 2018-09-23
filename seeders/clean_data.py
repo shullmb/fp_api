@@ -16,6 +16,4 @@ for i in range(0,len(dataframes)):
     output = pd.merge(zipcodes, dataframes[i], on='Station', how='inner')
     zipcodes = output
 
-
-# output.merge(zipcodes, on='Station')
 zipcodes.to_csv('./data/output.csv', index=False)
