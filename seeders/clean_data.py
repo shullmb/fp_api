@@ -10,7 +10,8 @@ zipcodes = pd.read_fwf('./data/zipcodes-normals-stations.txt', names=['Station',
 for root, dirs, files in os.walk('./data'):
     for filename in files:
         if fnmatch.fnmatch(filename, file_ext):
-            dataframes.append(pd.read_fwf('./data/' + filename, names=['Station', filename], dtype=str, header=None, sep='\s+'))
+            colname = filename.replace('ann-tmin-','').replace('.txt','')
+            dataframes.append(pd.read_fwf('./data/' + filename, names=['Station', colname], dtype=str, header=None, sep='\s+'))
 
 for i in range(0,len(dataframes)):
     output = pd.merge(zipcodes, dataframes[i], on='Station', how='inner')
