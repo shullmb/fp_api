@@ -6,6 +6,9 @@ const parameters = {
     trim: false
 }
 
-const jsonArr=await csv(parameters).fromFile(INPUT)
-
-console.log(jsonArr)
+csv(parameters).fromFile(INPUT).then( arr => {
+    arr.sort( (a, b) => a['Zip'] - b['Zip'])
+    for (let i = 0; i < 25; i ++) {
+        console.log(arr[i]['Zip'])
+    }
+})
