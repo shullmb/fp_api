@@ -4,7 +4,7 @@ import numpy as np
 
 file_ext = 'ann-*.txt'
 dataframes = []
-output = None;
+output = None
 zipcodes = pd.read_fwf('./data/zipcodes-normals-stations.txt', names=['Station', 'Zip','Location'],dtype=str, sep='\s+', header=None)
 
 for root, dirs, files in os.walk('./data'):
