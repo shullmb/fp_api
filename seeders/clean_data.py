@@ -2,10 +2,10 @@ import os, fnmatch
 import pandas as pd
 import numpy as np
 
-file_ext = 'ann-*.txt'
+zipcodes = pd.read_fwf('./data/zipcodes-normals-stations.txt', names=['Station', 'Zip','Location'],dtype=str, sep='\s+', header=None)
 dataframes = []
 output = None
-zipcodes = pd.read_fwf('./data/zipcodes-normals-stations.txt', names=['Station', 'Zip','Location'],dtype=str, sep='\s+', header=None)
+file_ext = 'ann-*.txt'
 
 for root, dirs, files in os.walk('./data'):
     for filename in files:

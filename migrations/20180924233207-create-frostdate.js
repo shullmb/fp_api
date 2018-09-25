@@ -17,49 +17,94 @@ module.exports = {
       location: {
         type: Sequelize.STRING
       },
-      hardFeeze50: {
+      firstHardFreeze50: {
         type: Sequelize.STRING
       },
-      hardFreeze60: {
+      firstHardFreeze60: {
         type: Sequelize.STRING
       },
-      hardFreeze70: {
+      firstHardFreeze70: {
         type: Sequelize.STRING
       },
-      hardFreeze80: {
+      firstHardFreeze80: {
         type: Sequelize.STRING
       },
-      hardFreeze90: {
+      firstHardFreeze90: {
         type: Sequelize.STRING
       },
-      freeze50: {
+      firstFreeze50: {
         type: Sequelize.STRING
       },
-      freeze60: {
+      firstFreeze60: {
         type: Sequelize.STRING
       },
-      freeze70: {
+      firstFreeze70: {
         type: Sequelize.STRING
       },
-      freeze80: {
+      firstFreeze80: {
         type: Sequelize.STRING
       },
-      freeze90: {
+      firstFreeze90: {
         type: Sequelize.STRING
       },
-      frost50: {
+      firstFrost50: {
         type: Sequelize.STRING
       },
-      frost60: {
+      firstFrost60: {
         type: Sequelize.STRING
       },
-      frost70: {
+      firstFrost70: {
         type: Sequelize.STRING
       },
-      frost80: {
+      firstFrost80: {
         type: Sequelize.STRING
       },
-      frost90: {
+      firstFrost90: {
+        type: Sequelize.STRING
+      },
+      lastHardFreeze50: {
+        type: Sequelize.STRING
+      },
+      lasthardFreeze60: {
+        type: Sequelize.STRING
+      },
+      lasthardFreeze70: {
+        type: Sequelize.STRING
+      },
+      lasthardFreeze80: {
+        type: Sequelize.STRING
+      },
+      lasthardFreeze90: {
+        type: Sequelize.STRING
+      },
+      lastFreeze50: {
+        type: Sequelize.STRING
+      },
+      lastFreeze60: {
+        type: Sequelize.STRING
+      },
+      lastFreeze70: {
+        type: Sequelize.STRING
+      },
+      lastFreeze80: {
+        type: Sequelize.STRING
+      },
+      lastFreeze90: {
+        type: Sequelize.STRING
+      },
+      lastFrost50: {
+        type: Sequelize.STRING
+      },
+      lastFrost60: {
+        type: Sequelize.STRING
+      },
+      lastFrost70: {
+        type: Sequelize.STRING
+      },
+      lastFrost80: {
+        type: Sequelize.STRING
+      },
+      lastFrost90: {
         type: Sequelize.STRING
       },
       createdAt: {

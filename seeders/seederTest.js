@@ -1,4 +1,5 @@
 const csv = require('csvtojson');
+const db = require('../models');
 const INPUT = './data/output.csv';
 
 const parameters = {
