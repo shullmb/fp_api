@@ -1,5 +1,6 @@
+const fs = require('fs');
 const csv = require('csvtojson');
-const db = require('../models');
+// const db = require('../models');
 const INPUT = './data/output.csv';
 
 const parameters = {
@@ -8,8 +9,5 @@ const parameters = {
 }
 
 csv(parameters).fromFile(INPUT).then( arr => {
-    arr.sort( (a, b) => a['Zip'] - b['Zip'])
-    for (let i = 0; i < 25; i ++) {
-        console.log(arr[i]['Zip'])
-    }
+    fs.writeFile('./data/output.json', JSON.stringify(arr))
 })
