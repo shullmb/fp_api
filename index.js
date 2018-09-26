@@ -16,22 +16,17 @@ app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
 
-// 1) must come before app.use passport
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true
 }))
 
-// 2) setup flash messages
 app.use(flash());
 
-// 3) must come after session setup
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-// 4) Attach flash msg & current user to the response for all routes
 app.use( (req,res,next) => {
   res.locals.alerts = req.flash();
   res.locals.currentUser = req.user;
