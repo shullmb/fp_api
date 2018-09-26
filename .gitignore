@@ -81,3 +81,6 @@ Temporary Items
 
 # raw data
 # seeders/data
+
+# cross platform postgres issue resolved!
+config.json
