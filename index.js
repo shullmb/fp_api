@@ -6,6 +6,7 @@ const session = require('express-session');
 const passport = require('./config/passportConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
 const flash = require('connect-flash');
+const port = process.env.PORT || 3001;
 
 const app = express();
 
@@ -46,10 +47,10 @@ app.get('/profile', isLoggedIn, (req,res) => {
 })
 
 app.use('/auth', require('./controllers/auth'));
-app.use('/api/v1/frostpoint', require('./controllers/frostpoint'));
+app.use('/api/v1/frostdates', require('./controllers/frostdates'));
 
-const server = app.listen(process.env.PORT || 3000, () => {
-  console.log("🔥 🔥 🔥 server running on port 3000 🔥 🔥 🔥");
+const server = app.listen(port, () => {
+  console.log(`❄️  server listening on port ${port} ❄️`);
 })
 
 module.exports = server;

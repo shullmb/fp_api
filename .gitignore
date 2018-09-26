@@ -84,3 +84,6 @@ Temporary Items
 
 # cross platform postgres issue resolved!
 config.json
+
+# pycache 
+ __pycache__
